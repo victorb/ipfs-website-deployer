@@ -1,0 +1,11 @@
+[Unit]
+Description=ipfs-website-deployer
+
+[Service]
+Environment="IPFS_PATH=/root/.ipfs"
+WorkingDirectory=/app
+ExecStart=/usr/bin/java -jar /app/ipfs-website-deployer.jar
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
